@@ -9,13 +9,11 @@ pipeline {
         }
 
         stage('Build Demo Image') {
-            steps {
-                dir('myapp') {
-                    sh 'docker build -t myapp -f ../Dockerfile .'
+    steps {
+        sh 'docker build -t myapp -f Dockerfile .'
+    }
+}
 
-                }
-            }
-        }
 
         stage('Run Container') {
             steps {
