@@ -11,7 +11,8 @@ pipeline {
         stage('Build Demo Image') {
             steps {
                 dir('myapp') {
-                    sh 'docker build -t myapp .'
+                    sh 'docker build -t myapp -f ../Dockerfile .'
+
                 }
             }
         }
